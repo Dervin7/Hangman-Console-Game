@@ -127,16 +127,15 @@ public class ProgramUI
 
             wrongAnswer();
         }
-        else
-        {
-        }
 
         if (numInWord == arr.Length)
         {
             Console.Clear();
 
             DisplayBlank();
+            Console.ForegroundColor = ConsoleColor.Green;
             System.Console.WriteLine("\nCongrats! You got guessed the word!");
+            Console.ForegroundColor = ConsoleColor.White;
             gameRunning = false;
         }
         else
@@ -147,12 +146,16 @@ public class ProgramUI
 
     public void CorrectAnswer()
     {
+        Console.ForegroundColor = ConsoleColor.Green;
         System.Console.WriteLine("Correct guess!");
+        Console.ForegroundColor = ConsoleColor.White;
     }
 
     public void wrongAnswer()
     {
+        Console.ForegroundColor = ConsoleColor.Red;
         System.Console.WriteLine("Sorry, wrong guess... guess again");
+        Console.ForegroundColor = ConsoleColor.White;
         hangmanBodyCount++;
         DisplayBody(hangmanBodyCount);
     }
