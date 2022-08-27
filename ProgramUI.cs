@@ -38,7 +38,7 @@ public class ProgramUI
         while (gameRunning)
         {
             System.Console.WriteLine("Guess a letter:");
-            string userGuess = Console.ReadLine();
+            string userGuess = Console.ReadLine().ToLower();
 
             CheckForLetter(userGuess, gameArr);
         }
